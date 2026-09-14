@@ -22,26 +22,29 @@ namespace Lab_3And4
         }
         static void Main(string[] args)
         {
-            // 3. Single-cast delegate
-            // Delegate points only to ShowWelcome()
-            MessageHandler message = ShowWelcome;
+            //// 3. Single-cast delegate
+            //// Delegate points only to ShowWelcome()
+            //MessageHandler message = ShowWelcome;
 
-            Console.WriteLine("Single-cast Delegate:");
-            message();
+            //Console.WriteLine("Single-cast Delegate:");
+            //message();
 
-            // 4. Multi-cast delegate
-            // Add ShowGoodbye() to the delegate
-            message += ShowGoodbye;
+            //// 4. Multi-cast delegate
+            //// Add ShowGoodbye() to the delegate
+            //message += ShowGoodbye;
 
-            Console.WriteLine("\nMulti-cast Delegate:");
-            message();
+            //Console.WriteLine("\nMulti-cast Delegate:");
+            //message();
 
-            // 5. Remove ShowWelcome()
-            // Only ShowGoodbye() remains
-            message -= ShowWelcome;
+            //// 5. Remove ShowWelcome()
+            //// Only ShowGoodbye() remains
+            //message -= ShowWelcome;
 
-            Console.WriteLine("\nAfter Removing ShowWelcome():");
-            message();
+            //Console.WriteLine("\nAfter Removing ShowWelcome():");
+            //message();
+            Lab_4 example= new Lab_4();
+            //Console.ReadKey();
+
         }
     }
 }

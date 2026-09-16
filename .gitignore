@@ -1,3 +1,4 @@
+.gitignore C:\Users\User\source\repos\LabWorksDotnet\.gitignore
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -52,3 +53,43 @@ Thumbs.db
 
 # Project-specific
 *.log
+
+# ASP.NET Core / Razor Pages
+wwwroot/node_modules/
+wwwroot/lib/
+PublishProfiles/
+Properties/PublishProfiles/
+
+# Application configuration
+appsettings.*.json
+!appsettings.json
+secrets.json
+.env
+.env.local
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+
+# Application Insights
+ApplicationInsights.json
+
+# BeatPulse health check temp db
+healthchecksdb
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# ReSharper
+.DotSettings
+.DotSettings.user
+
+# Backup files
+*.bak
+*.backup
+*~
+*.tmp

@@ -1,0 +1,75 @@
+﻿@model List<ProductController.Product>
+<a asp-controller="Product"
+   asp-action="RedirectToHome"
+   class="btn btn-primary">
+    Go to Home
+</a>
+<h2>Product List</h2>
+<table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Action</th>
+            <th>Image</th>
+            @* <th>Price</th>
+            <th>Discount</th>
+            <th>Stock</th>
+            <th>Available</th>
+            <th>Rating</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>SKU</th>
+            <th>Created Date</th> *@
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Brand</td>
+                <td>@product.Category</td>
+                <td>
+                    <a asp-controller="Product"
+                       asp-action="GetProductInfo"
+                       asp-route-id="@product.Id">
+                        View Details
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Product"
+                       asp-action="DownloadProductFile"
+                       asp-route-id="@product.Id"
+                       class="btn btn-success">
+                        Download Image
+                    </a>
+                </td>
+                @* <td class="text-end">@product.Price.ToString("C")</td>
+                <td>@product.Discount%</td>
+                <td>@product.StockQuantity</td>
+                <td>
+                    @if (product.IsAvailable)
+                    {
+                        <span class="badge bg-success">Yes</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">No</span>
+                    }
+                </td>
+                <td>@product.Rating ⭐</td>
+                <td>@product.Color</td>
+                <td>@product.Size</td>
+                <td>@product.SKU</td>
+                <td>@product.CreatedDate.ToString("yyyy-MM-dd")</td> *@
+            </tr>
+        }
+    </tbody>
+</table>

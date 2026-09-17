@@ -185,8 +185,7 @@ namespace LabWorksMVC_7_8_9_10.Controllers
         {
             return Content("Welcome to the Product Management System!");
         }
-
-        //6. Add a new action ReturnStatusCode in ProductController that returns a custom HTTP
+        // 6. Add a new action ReturnStatusCode in ProductController that returns a custom HTTP
         //status code(e.g., 204 No Content).[StatusCodeResult]
         public IActionResult ReturnStatusCode()
         {

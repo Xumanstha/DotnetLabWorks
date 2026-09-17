@@ -1,0 +1,25 @@
+﻿<h2>@ViewBag.Message</h2>
+
+<h3>Numbers:</h3>
+
+<ul>
+    @if (ViewData["Numbers"] is List<int> numbers)
+    {
+        foreach (var number in numbers)
+        {
+            <li>
+                @number
+
+                @if (number > 10)
+                {
+                    <span> - Number is large</span>
+                }
+                else
+                {
+                    <span> - Number is small</span>
+                }
+            </li>
+        }
+    }
+</ul>
+

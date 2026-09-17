@@ -1,0 +1,26 @@
+﻿@model LabWorksMVC_7_8_9_10.Views.ViewModels.UserViewModel
+<h2>Custom Tag Helper</h2>
+
+<p>
+    Current Date:
+    <display-date date="@DateTime.Now"></display-date>
+</p>
+<h2>User Form</h2>
+
+<form asp-action="Index" method="post">
+
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>

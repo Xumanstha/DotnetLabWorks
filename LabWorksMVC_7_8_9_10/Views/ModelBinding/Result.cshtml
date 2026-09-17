@@ -1,0 +1,24 @@
+﻿@model LabWorksMVC_7_8_9_10.Models.Person
+
+@{
+    ViewData["Title"] = "Person Created";
+}
+
+<h2>Person Created Successfully</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Age</th>
+        <td>@Model.Age</td>
+    </tr>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Create Another</a>

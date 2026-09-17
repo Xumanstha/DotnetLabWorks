@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Cookie Form";
+}
+
+<h2>3. Cookies Demo — Theme Preference</h2>
+
+<form asp-action="CookieForm" method="post" class="col-md-5">
+    <div class="mb-3">
+        <label class="form-label">Choose Theme</label>
+        <select name="theme" class="form-select">
+            <option value="Light">Light</option>
+            <option value="Dark">Dark</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success">Save Preference</button>
+    <a asp-action="CookieDisplay" class="btn btn-outline-secondary">View Current Theme</a>
+</form>

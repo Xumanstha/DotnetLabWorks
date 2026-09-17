@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h2>Employee List</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+    <p class="text-muted">
+        This message came from <code>TempData</code>. It survived the redirect from
+        <code>AddEmployee</code>, but will NOT survive another request.
+    </p>
+}
+else
+{
+    <div class="alert alert-secondary">
+        No message in TempData right now — it was already read/expired.
+    </div>
+}
+
+<a asp-action="AddEmployee" class="btn btn-primary">Add Another Employee</a>
+<a asp-action="EmployeeListAgain" class="btn btn-outline-secondary">
+    Reload This Page (simulates a second request)
+</a>

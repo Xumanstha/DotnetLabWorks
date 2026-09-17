@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Cookie Theme";
+    string theme = ViewBag.Theme ?? "Light";
+    string bgColor = theme == "Dark" ? "#212529" : "#ffffff";
+    string textColor = theme == "Dark" ? "#f8f9fa" : "#000000";
+}
+
+<div style="background-color: @bgColor; color: @textColor; padding: 30px; border-radius: 8px;">
+    <h2>Current Theme: @theme</h2>
+    <p>This box's background/text color is set from the <code>ThemePreference</code> cookie.</p>
+
+    <a asp-action="CookieForm" class="btn btn-primary">Change Theme</a>
+    <a asp-action="DeleteCookie" class="btn btn-danger">Delete Cookie</a>
+</div>
+
+<p class="mt-3 text-muted">
+    Cookie set with <code>Expires = DateTimeOffset.Now.AddDays(1)</code> — persists 1 day.
+</p>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Session Data";
+}
+
+<h2>Session Values</h2>
+
+@if (string.IsNullOrEmpty(ViewBag.Name) && string.IsNullOrEmpty(ViewBag.Email))
+{
+    <div class="alert alert-warning">No session data found (empty or cleared).</div>
+}
+else
+{
+    <table class="table w-auto">
+        <tr><th>Name</th><td>@ViewBag.Name</td></tr>
+        <tr><th>Email</th><td>@ViewBag.Email</td></tr>
+    </table>
+}
+
+<a asp-action="SessionForm" class="btn btn-primary">Back to Form</a>
+<a asp-action="ClearSession" class="btn btn-danger">Clear Session</a>
+
+<p class="mt-3 text-muted">
+    Refresh this page (F5) — the values stay, because they're in Session, not TempData.
+</p>

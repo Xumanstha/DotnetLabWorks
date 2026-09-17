@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Session Form";
+}
+
+<h2>1. Session Demo — Enter Your Details</h2>
+
+<form asp-action="SessionForm" method="post" class="col-md-5">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Save to Session</button>
+    <a asp-action="SessionDisplay" class="btn btn-outline-secondary">View Session Data</a>
+</form>

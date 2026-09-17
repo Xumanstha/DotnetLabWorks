@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<h2>2. TempData Demo — Add Employee</h2>
+
+<form asp-action="AddEmployee" method="post" class="col-md-5">
+    <div class="mb-3">
+        <label class="form-label">Employee Name</label>
+        <input type="text" name="employeeName" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Add Employee</button>
+</form>

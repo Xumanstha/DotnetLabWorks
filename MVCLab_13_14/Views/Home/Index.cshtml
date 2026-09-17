@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Lab Task 13: Session, TempData &amp; Cookies</h1>
+<p class="text-muted">Pick a demo below.</p>
+
+<div class="row g-3">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">1. Session</h5>
+                <p class="card-text">Store Name &amp; Email in Session and read them back.</p>
+                <a class="btn btn-primary" asp-action="SessionForm">Try Session</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">2. TempData</h5>
+                <p class="card-text">Add an "employee" and see a one-time success message.</p>
+                <a class="btn btn-primary" asp-action="AddEmployee">Try TempData</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">3. Cookies</h5>
+                <p class="card-text">Set a Light/Dark theme preference cookie (1-day expiry).</p>
+                <a class="btn btn-primary" asp-action="CookieForm">Try Cookies</a>
+            </div>
+        </div>
+    </div>
+</div>
